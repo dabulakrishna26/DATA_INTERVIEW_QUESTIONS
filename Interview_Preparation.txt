@@ -1,0 +1,170 @@
+So what are the databases that you have worked on so far?
+I have worked with a variety of databases, including both relational and non-relational types. For relational databases, I have experience with SQL Server,  PostgreSQL, and Oracle. I've used them for structured data management, running complex queries, and building stored procedures and functions.
+
+
+in the non-relational side, I’ve worked with Cosmos DB for handling unstructured and semi-structured data.
+ In cloud-based environments, I’ve worked with Azure Synapse Analytics, BigQuery (on GCP), and Fabric Warehouse for data warehousing and large-scale data processing.
+
+I've also used Azure Data Lake for storing and managing big data, and I’ve implemented ETL pipelines using Azure Data Factory to automate data loading and transformation tasks.
+
+Among these, I am most comfortable with SQL Server and Synapse since I have worked extensively on optimizing query performance, handling data partitions, and ensuring data consistency in these platforms."*
+
+Which one do you find most comfortable working with and why?
+Have you worked with both relational and non-relational databases?
+Can you describe a challenging scenario you faced while working with a database and how you resolved it?
+How do you ensure data integrity and performance optimization in the databases you've used?
+Have you worked with cloud-based databases like Azure Synapse, BigQuery, or AWS RDS? How was the experience different from on-premises databases?
+
+Can you describe a challenging scenario you faced while working with a database and how you resolved it?
+
+Slow Queries: Large data sets, missing indexes, or inefficient query plans can cause slow
+
+Deadlocks and Blocking: When multiple queries try to access the same data simultaneously, it can cause deadlocks or slow responses
+
+Data Integrity and Consistency
+
+Peformence Tuning : 
+
+Use Proper Indexing ,Avoid Over-Indexing,Use SELECT Only Required Columns,Avoid Correlated Subqueries ,Use UNION ALL Instead of UNION ,Analyze Execution Plans SET STATISTICS IO ON;SET STATISTICS TIME ON
+Partition Large Tables ,Rebuild/Reorganize Indexes
+
+========================
+
+what kind of work you have done supporting those databases or from architecture level or even from a hands on level
+
+database migration plan between different clouds(AWS, AZURE)
+
+Assessment and Planning
+Preparation
+Data Migration
+Testing and Validation
+Cutover and Go-Live
+Post-Migration Monitoring and Optimization
+
+
+==============
+
+
+database migration plan between different clouds(AWS, AZURE)
+5
+what aspects you look into when migration bet (AWS, AZURE)
+
+Database Type Compatibility
+Schema Differences
+Object Compatibility
+Query Optimization
+Failback Plan
+Replication vs. Cutover
+Access Controls
+Data Encryption
+Regulatory Compliance
+rack CPU, memory, and I/O usage
+Storage Costs
+ Compute Costs
+ Licensing
+
+ 
+
+6
+what are the factors you look into during migration between databases?
+7
+what are DR strategy of the Clouds?
+
+Azure offers built-in DR capabilities and services to minimize downtime and data loss
+Recovery Time Objective (RTO)
+Recovery Point Objective (RPO)
+Geo-Replication
+Zone Redundancy
+
+8
+what are RPO/RTO
+9
+which databse which database you migrated to ?
+
+Migrating an on-premises SQL Server to Azure SQL Database requires careful planning and execution to ensure minimal downtime and data integrity. The process involves assessment, preparation, migration, and validation
+
+
+. Pre-Migration Assessment and Planning
+ (a) Identify Migration Scope
+ 
+Identify the databases to migrate.
+Determine the size and complexity of the databases.
+Assess compatibility with Azure SQL (use DMA).
+(b) Choose the Right Target
+Decide the appropriate Azure SQL deployment model:
+
+Model	Use Case	                            Features
+Azure SQL Database (Single)                  	Single app or small workload	Managed, automatic scaling
+Azure SQL Database (Elastic Pool)            	Multiple databases with shared resources	Cost-effective, load balancing
+Azure SQL Managed Instance	                    Near-complete compatibility with on-prem SQL	Lift-and-shift with minimal changes
+SQL Server on Azure VM	                        Full control over the OS and SQL Server	Suitable for legacy apps requiring OS-level access
+
+3. Migration
+🌍 Method 1: Using Data Migration Assistant (DMA) (Best for small to medium databases)
+
+Open DMA and select "Migrate".
+Connect to the on-prem SQL Server.
+Select target as Azure SQL Database.
+Choose objects to migrate (schema, data).
+Start the migration.
+
+Method 2: Using Azure Data Migration Service (DMS) (Best for large databases)
+Create an Azure DMS instance in the portal.
+Choose the source as On-Premises SQL Server.
+Select target as Azure SQL Database.
+Choose online or offline migration mode.
+Start the migration process
+
+
+Method 3: Using Transactional Replication (For near-zero downtime)
+Set up transactional replication on the on-prem server.
+Configure Azure SQL Database as the subscriber.
+Synchronize changes in real time.
+Switch application connection to Azure SQL after replication completes.
+
+
+Method 4: Using BACPAC Files (For smaller databases)
+Export database to .bacpac file using SSMS.
+Upload to Azure Blob Storage.
+Import .bacpac into Azure SQL Database using:
+sql
+Copy code
+
+
+
+
+
+
+10
+How Redshift is different than PostgreSQL databases
+11
+For vertical scaling do you have experence in MongoDB
+12
+How did you do Redshift migration?
+13
+what are the number  of instances and config of Redshift
+14
+when you provison redshift what were the config?
+15
+what are the ETL loads goes into Redshift?
+16
+what mechanism did you use to load from  Redshift  to S3
+17
+what are the Database services of  you worked on Azure side?
+18
+How do you connect data factory  to AWS Redshift
+19
+How do you Redshift tables to copy into data Factory
+20
+which API in Cosmos DB
+21
+Is there an Spark  experience?
+22
+Regadring Spark how do you read the file and write it back 
+23
+How do you achiven in spark, can you gi
+
+
+
+
+ 
